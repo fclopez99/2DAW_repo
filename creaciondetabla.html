@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Creación de tabla mediante bucles</title>
+    </head>
+    <body>
+        <table border="1em">
+            <script>
+                var filas = parseInt(prompt("Introduce o número de filas: "));
+                var columnas = parseInt(prompt("Introduce o número de columnas: "));
+                var i = 0;
+                var j = 0;
+
+                for (i = 1; i <= filas ; i++) {
+                    document.write(`<tr>`)
+                        for(j = 1; j <= columnas; j++){
+                            document.write(`<td>&nbsp;</td>`);
+                        }
+                        document.write(`</tr>`);
+                }
+            </script>
+        </table>
+    </body>
+</html>
