@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Establecer color de fondo con JS</title>
+        
+    </head>
+    <body>
+        <style>
+            #fondo{
+                position: fixed;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        <script>
+            var R = parseInt(prompt("Introduce un valor entre 0 e 255 para o Rojo"));
+            var G = parseInt(prompt("Introduce un valor entre 0 e 255 para o Verde"));
+            var B = parseInt(prompt("Introduce un valor entre 0 e 255 para o Azul"));
+
+            document.write(`<div id="fondo" ` + `style="background-color:rgb(${R},${G},${B})"`)
+        </script>
+    </body>
+</html>
