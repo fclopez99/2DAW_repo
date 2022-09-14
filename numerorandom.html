@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Numero secreto random</title>
+    </head>
+    <body>
+        <script>
+            var numerosecreto = parseInt(Math.random() * 11);
+            var numero = 0;
+            var correcto = false;
+            var fallos = 0;
+            while (correcto == false){
+                numero = parseInt(prompt("Introduzca un valor: "));
+                if (numero == numerosecreto){
+                    correcto = true;
+                    document.write("Correcto. "+ numero + `<br>`);
+                }
+                else {
+                    document.write(`<br> Intentao de novo.`);
+                    fallos++;
+                }
+            }
+            if(fallos<5){
+                document.write("Ben feito.");
+            }
+            else{
+                document.write("A próxima mellor.");
+            }
+            
+        </script>
+    </body>
+</html>

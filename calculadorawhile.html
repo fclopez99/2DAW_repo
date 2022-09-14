@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Calculadora bucle while</title>
+    </head>
+    <body>
+        <script>
+            var x = 0;
+            var resultado = 0;
+            while(x <= 10){
+                var y = 0;
+                document.write(`<br>Tabla do ${x}:`)
+                while(y <= 10){
+                    resultado = x*y;
+                    document.write(`<br> ${x} * ${y} = ${resultado}`);
+                    y++;
+                }
+                x++;   
+            }
+        </script>
+    </body>
+</html>

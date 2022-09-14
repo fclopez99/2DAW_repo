@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Calculadora bucle for</title>
+    </head>
+    <body>
+        <script>
+            var x , y;
+            var resultado = 0;
+            for(x=0;x <= 10;x++){
+                document.write(`<br>Tabla do ${x}:`)
+                for(y=0;y <= 10;y++){
+                    resultado = x*y;
+                    document.write(`<br> ${x} * ${y} = ${resultado}`);
+                }
+                document.write(`<hr>`);
+            }
+        </script>
+    </body>
+</html>
