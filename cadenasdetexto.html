@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Prueba de script de tratado de cadenas de texto</title>
+    </head>
+    <body>
+        <script>
+            var cadena1 = prompt("Escribe una cadena de texto: ");
+            //var cadena2 = "";
+            //var cadena2 = prompt("Escribe una segunda cadena: ");
+/*          
+            Comparación de cadenas por orden alfabético.
+            if(cadena1 == cadena2){
+                alert("Las cadenas son iguales");
+            }
+            else {
+                alert("Las cadenas son distintas");
+            }
+*/
+
+//alert(cadena1.localeCompare(cadena2)); Comparación de cadenas por longitud.
+/*
+            if(cadena1.length == cadena2.length){
+                alert("Las cadenas son iguales.");
+            }
+            else if(cadena1.length > cadena2.length) {
+                alert("La cadena 1 es más larga.");
+            }
+            else {
+                alert("La cadena 2 es más larga.");
+            }
+*/
+/*
+            // Borrado de caracteres, en este caso vocales.
+            for(let i = 0; i < cadena1.length ; i++){
+                if (cadena1.charAt(i) != "a" && cadena1.charAt(i) !="e" && cadena1.charAt(i) !="i" && cadena1.charAt(i) !="o" && cadena1.charAt(i) !="u"){
+                    cadena2 = cadena2 + cadena1.charAt(i);
+                }
+            }
+            alert(cadena2);
+*/
+            //.endswith -> acaba con... || .startswith -> empieza con... 
+            for(let i = 0; i < cadena1.length ; i++){
+                cadena1 = cadena1.replace( "a", " " );
+            }
+            alert(cadena1);
+        </script>
+    </body>
+</html>
