@@ -5,15 +5,23 @@
     <body>
         <script>
             var cadena = prompt("Escribe un texto a cifrar");
-            var clave = prompt(parseInt("Introduce a clave de cifrado (num)"));
+            var clave;
             var cambio = 0;
             var final ="";
 
-            length = text.length;
-            for(i=0; i < length; i++){
-                currentLetter = text.charAt(i);
+            do{
+                clave=prompt("Introcue a clave numérica");
+                if(isNaN(Number(clave))){
+                    alert("Non pasaches un número");
+                }
+            }while(isNaN(Number(clave)));
+            clave = parseInt(clave);
+
+            for(let letra of cadena){
+                let cifra = letra.charCodeAt(letra)+clave;
+                document.write(String.fromCharCode(cifra));
             }
-// fromcharcode || charcodeAt
+// fromcharcode || charcodeAt || isNaN
         </script>
     </body>
 </html>
