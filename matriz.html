@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Ejercicio de arrays bidimensionales</title>
+    </head>
+    <body>
+        <script>
+            var arraybidimensional = new Array(2);
+
+            for( i = 0 ; i < 2 ; i++ ){
+                arraybidimensional[i]=new Array(4);
+            }
+            for ( j = 0 ; j < 2 ; j++ ){
+                for( k = 0 ; k < 4 ; k++ ){
+                    numero = prompt(parseInt("Introduce un número: "));
+                    arraybidimensional[j][k] = numero;
+                }
+            }
+            document.write(arraybidimensional);
+
+            for (l = 0 ; l < 2 ; l++){
+                for(m=0;m<4;m++){
+                    document.write(`<br> El valor de la posición ${l},${m} es ${arraybidimensional[l][m]} <br>`);
+
+                }
+            }
+
+        </script>
+    </body>
+</html>
