@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Práctica arrays con métodos</title>
+    </head>
+    <body>
+        <script>
+            var texto = prompt("Introduce un texto: ");
+            var array = texto.split(" ");
+            
+            document.write(array.length);
+            document.write(`<br> Primeira palabra: ${array[0]}<br>Última palabra: ${array[array.length - 1]} `);
+            document.write(`<br>`+array.reverse());
+            document.write(`<br>`+array.sort());
+
+/*
+Leer unha cadena de texto mediante prompt e generar un array
+coas palabras que contén.
+Mostrar a siguinete información: Numero de palabras,
+primeira e ultima palabra,
+palabras en orden inverso,
+palabras ordenadas alfabéticamente.
+*/
+//Rellenar array con numeros aleatorios por consola do 1 ao 10.
+            /*var cadenaaleatorios = new Array();
+            var numeroscad = parseInt(Math.random()*11);
+            for (i=0;i<10;i++){
+                numeroscad = parseInt(Math.random()*11);
+                cadenaaleatorios[i] + numeroscad;
+            }*/
+            
+//Realizar un array copia de outro que non sea de si mismo.
+            const numeros = [1,2,3,4,5,6,7,8,9];
+            var copianum = numeros.slice();
+            document.write(copianum);
+
+//Descubrir si un array e palíndromo.
+
+
+
+        </script>
+    </body>
+</html>

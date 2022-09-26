@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Prueba de ejemplo con arrays</title>
+    </head>
+    <body>
+        <script>
+
+            const diaslaborables = ["lunes","martes","miercoles","jueves","viernes"];
+            const findesemana = ["sabado","domingo"]
+            //document.write(diaslaborables.length);
+            //document.write(diaslaborables instanceof Array);
+            //diaslaborables.push("sabado");
+            //document.write(diaslaborables);
+            //diaslaborables.pop();
+            //document.write(`<br> ${diaslaborables}`);
+            //diaslaborables.unshift("Lunes modificado");
+            //document.write(`<br> ${diaslaborables}`);
+            const semanaenteira = diaslaborables.concat(findesemana);
+            document.write(semanaenteira);
+            //sentencia .slice()
+            //var tresdias = semanaenteira.slice(3,6);
+            //document.write(`<br>`+tresdias);
+            //var tresdias = semanaenteira.slice(3);
+            //document.write(`<br>`+tresdias);
+            //var tresdias = semanaenteira.slice();
+            //document.write(`<br>`+tresdias);
+            //var borrado = semanaenteira.splice(1,2);
+            //document.write(`<br>`+borrado);
+            var invertido = semanaenteira.reverse();
+            document.write(`<br>` + invertido);
+            var arrayordenado = semanaenteira.sort();
+            document.write(`<br>`+ arrayordenado);
+
+/*
+Leer unha cadena de texto mediante prompt e generar un array
+coas palabras que contén.
+Mostrar a siguinete información: Numero de palabras,
+primeira e ultima palabra,
+palabras en orden inverso,
+palabras ordenadas alfabéticamente.
+*/
+
+
+
+
+
+        </script>
+    </body>
+</html>
+
+/

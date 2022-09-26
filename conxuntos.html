@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>conxuntos</title>
+    </head>
+    <body>
+        <script>        
+            const lista = new Set();
+            var a1 = true;
+            var num = 0;
+            while (a1 == true)
+            {
+                num = parseInt(prompt("Introduce un número: "));
+                lista.add(num);
+                var seguir = prompt("Quieres continuar? (S/N)");
+                if (seguir == "N" || seguir == "n")
+                {
+                    a1 = false;
+                    document.write("Realizouse un set con "+lista.size+" elementos ");
+                }
+            }
+            array = [...lista];
+            document.write(array);
+        </script>
+    </body>
+</html>
