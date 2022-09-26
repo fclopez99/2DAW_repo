@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Ejercicio 5 Repaso de arrays</title>
+    </head>
+    <body>
+        <script>
+            var array = new Array();
+
+            for (i=0;i<10;i++){
+                var numero = parseInt(prompt("Introduce un numero: "));
+                array[i] = numero;
+            }
+            arrayordenado = array.sort();
+            maximo = arrayordenado[9];
+            minimo = arrayordenado[0];
+
+            document.write(`A posición do valor mais alto é: ${array.indexOf(maximo)}.`);
+            document.write(`<br>A posición do valor mais baixo é: ${array.indexOf(minimo)}.`);
+        </script>
+    </body>
+</html>

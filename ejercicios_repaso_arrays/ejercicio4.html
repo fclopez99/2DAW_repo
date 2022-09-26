@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Ejercicio 4 Repaso arrays</title>
+    </head>
+    <body>
+        <script>
+            var array = new Array();
+
+            for (i=0;i<5;i++){
+                var nombre = prompt("Introduce un nombre: ");
+                array[i] = nombre;
+            }
+
+            var busqueda = prompt("Introduce o nombre a buscar");
+            if (array.indexOf(busqueda)==-1){
+                document.write("Este nombre non está na lista");
+            }
+            else document.write(`O nombre atopase na posición ${array.indexOf(busqueda)} da lista`);
+            
+        </script>
+    </body>
+</html>

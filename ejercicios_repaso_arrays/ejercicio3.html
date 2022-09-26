@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Ejercicio 3 respaso de arrays</title>
+    </head>
+    <body>
+        <script>
+            
+            var array = new Array();
+
+            for (i=0;i<10;i++){
+                var numero = parseInt(Math.random() * 11);
+                array[i] = numero;
+            }
+
+            var copia = array.slice();
+            document.write(array);
+            document.write(`<br> ${copia}`);
+        </script>
+    </body>
+</html>
