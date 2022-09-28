@@ -11,27 +11,29 @@ ter en conta que non se poden repetir as combinacións.
     </head>
     <body>
         <script>
-            
-            var lista=[Math.floor(Math.random()*(49-1))+1];  
-            document.write("longitud:"+lista.length," lista: ",lista+`<br>`);  
-            while (lista.length<6){  
-                    var candidato=Math.floor(Math.random()*(49-1))+1;  
-                    document.write("candidato: ",candidato+`<br>`);  
-                    var norepe=true;//inicialmente suponemos que no está repetido  
-                while (norepe){  
-                    lista.forEach(function(item){  
-                        if(candidato==item){  
-                            norepe=false; //detectado nº repetido  
-                        };  
-                    });  
-                    if (norepe){  
-                        lista.push(candidato); //append al array  
-                        document.write("longitud:"+lista.length," lista: ",lista+`<br>`);  
-                    };  
-                };  
-            };  
-            lista.sort((a,b)=>a-b); //función de flecha para ordenar números bien  
-            $('div').html(lista.join(' ')); //convertir array to string  
+            const N_COMBINNACIONES=50;
+            const N_INTERCAMBIOS=50;
+            const RANGO_TOTAL=49;
+            const RANGO_SOLUCION=6;
+            const primitiva=[];
+
+            for(let i=0;i<RANGO_TOTAL;i++){
+                primitiva[i]=i+1;
+            }
+            for(let i=1;i<N_COMBINNACIONES;i++){
+                for(let j=1;j<=N_INTERCAMBIOS;j++){
+                    let i1=parseInt(Math.random()*primitiva.length);
+                    let i2=parseInt(Math.random()*primitiva.length);
+                    [primitiva[i1], primitiva[i2]]=[primitiva[i2], primitiva[i1]];
+                }
+                document.write(`<h2>Combinación número ${i}</h2>`);
+                document.write(`<p>`);
+                    for(let j=0;j<RANGO_SOLUCION;j++){
+                        document.write(`${primitiva[j]}`);
+                    }
+            }
+
+
         </script>
     </body>
 </html>

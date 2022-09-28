@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Frecuencia de números.</title>
+    </head>
+    <body>
+        <script>
+            const repeticions = 10000;
+            var mapa = new Map();
+
+            for(let i = 1; i<=10; i++){
+                mapa.set(i,0);
+            }
+            for(let i=1;i<=repeticions;i++){
+                let numero = parseInt((Math.random()*10)+1);
+                let frecuencia=mapa.get(numero);
+                mapa.set(numero, frecuencia+1);
+            }
+            document.write(`<h1>Frecuencias</h1>`);
+            for (let i=1;i<=10;i++){
+                document.write(`Número ${i}: ${mapa.get(i)} <br>`);
+            }
+        </script>
+    </body>
+</html>
