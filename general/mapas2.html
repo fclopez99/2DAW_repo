@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Práctica con mapas js</title>
+    </head>
+    <body>
+        <script>
+            const provincias = new Map();
+
+            var cp = 0;
+            var provincia = "";
+
+            for (i=0;i<2;i++){
+                provincia = prompt("Introduce unha provincia: ");
+                cp = prompt("Introduce o código postal: ");
+                provincias.set(cp,provincia);
+            }
+            for (let [clave , valor] of provincias){
+                document.write(`Clave: ${clave}, valor: ${valor}`);
+            }
+            document.write(`<hr>`);
+            for(let clave of provincias.keys()){
+                document.write(`Clave: ${clave} <br>`);
+            }
+            document.write(`<hr>`);
+            for (let valor of provincias.values()){
+                document.write(`Valor: ${valor} <br>`);
+            }
+        </script>
+    </body>
+</html>

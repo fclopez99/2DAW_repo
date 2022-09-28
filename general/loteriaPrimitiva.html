@@ -1,0 +1,37 @@
+<!--
+Crear unha app web que amose 50 conbinacións para xogar a 
+lotería primitiva. 
+As combinacións son seis números do 1 ao 49, pero hai que
+ter en conta que non se poden repetir as combinacións.
+-->
+
+<html>
+    <head>
+        <title>Lotería primitiva</title>
+    </head>
+    <body>
+        <script>
+            
+            var lista=[Math.floor(Math.random()*(49-1))+1];  
+            document.write("longitud:"+lista.length," lista: ",lista+`<br>`);  
+            while (lista.length<6){  
+                    var candidato=Math.floor(Math.random()*(49-1))+1;  
+                    document.write("candidato: ",candidato+`<br>`);  
+                    var norepe=true;//inicialmente suponemos que no está repetido  
+                while (norepe){  
+                    lista.forEach(function(item){  
+                        if(candidato==item){  
+                            norepe=false; //detectado nº repetido  
+                        };  
+                    });  
+                    if (norepe){  
+                        lista.push(candidato); //append al array  
+                        document.write("longitud:"+lista.length," lista: ",lista+`<br>`);  
+                    };  
+                };  
+            };  
+            lista.sort((a,b)=>a-b); //función de flecha para ordenar números bien  
+            $('div').html(lista.join(' ')); //convertir array to string  
+        </script>
+    </body>
+</html>

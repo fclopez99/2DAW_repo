@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Práctica con mapas js</title>
+    </head>
+    <body>
+        <script>
+            const provincias = new Map();
+
+            var cp = 0;
+            var provincia = "";
+
+            for (i=0;i<5;i++){
+                provincia = prompt("Introduce unha provincia: ");
+                cp = prompt("Introduce o código postal: ");
+                provincias.set(cp,provincia);
+            }
+            cp2=prompt("Introduce un cp a localizar: ");
+            if (!provincias.has(cp2)){
+                alert("Elemento non atopado");
+            }
+            else {
+                alert(provincias.get(cp2));
+            }
+            
+            console.log(provincias);
+        </script>
+    </body>
+</html>
