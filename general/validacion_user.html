@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Validación de usuario con nome e contraseña</title>
+    </head>
+    <body>
+        <script>
+            let nome, contraseña;
+            let seguir = true;
+            let nomeOK;
+            let contraseñaOK;
+            let hayMaiusculas = false;
+            let hayMinusculas = false;
+            let haynUMEROS = false;
+            let hayOtros = false;
+            const minusculas = "abcdefghijklmnñopqrstuvwxyz";
+            const numeros = "0123456789";
+
+            do{
+                nome=prompt("Escriba un nome de usuario: ");
+                if(nome ==null){
+                    seguir = false;
+                }
+                if(seguir==true){
+                    nomeOK=true;
+                    let i=0;
+                    while(nomeOK && i<nome.length){
+                        let caracter = nome.charAt(i);
+                        if(minusculas.indexOf(caracter)==-1 || numeros.indexOf(caracter)==-1){
+                            nomeOK=false;
+                            alert("O nome de usuario non e valido");
+                        }
+                    }
+                }
+            }
+            
+        </script>
+    </body>
+</html>
