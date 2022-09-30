@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>MAPAS</title>
+    </head>
+    <body>
+        <script>
+            var provincia, cp;
+            const provincias=new Map();
+            for(let i=0;i<2;i++)
+            {
+                provincia=prompt("Introduce a provincia");
+                cp=prompt("Introduce o código postal");
+                provincias.set(cp,provincia);
+            }
+            cp=prompt("Introduce valor a buscar")
+            if(provincias.has(cp)==false)
+            {
+                alert("Elemento non atopado");
+            }
+            else
+            {
+                alert(provincias.get(cp))
+            }
+            </script>
+    </body>
+</html>
+

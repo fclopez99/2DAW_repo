@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Crear tabla</title>
+    </head>
+    <body>
+        <table border="1">
+        <script>
+            var filas=0;
+            var columnas=0;
+            var i=0;
+            var j=0;
+            filas=parseInt(prompt("Introduce número de filas"));
+            columnas=parseInt(prompt("Introduce número de columnas"));
+            for(i=1;i<=filas;i++)
+            {
+                document.write("<tr>");
+                for(j=1;j<=columnas;j++)
+                {
+                    document.write("<td>&nbsp;</td>");
+                }
+                document.write("</tr>");
+            }
+        </script>
+        </table>
+    </body>
+</html>

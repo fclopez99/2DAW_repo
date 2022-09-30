@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>ARRAYS</title>
+ 
+    </head>
+    <body>
+        <script>
+            var arrayBidimensional= new Array(2);
+            for (let i of arrayBidimensional) 
+            {
+                    arrayBidimensional[i] = new Array(2);
+            }
+            for (let k of arrayBidimensional)
+            {
+                for (let j of arrayBidimensional[k])
+                {
+                    arrayBidimensional[k][j]=prompt("Introduce valor");
+                }
+            }
+            document.write(arrayBidimensional);                
+        </script>
+    </body>
+</html>

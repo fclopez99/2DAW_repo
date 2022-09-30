@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>ADIVIÑA O NÚMERO</title>
+    </head>
+    <body>
+        <script>
+            var fallos=0;
+            var clave=parseInt(Math.random()*11);
+            var lectura=0;
+            var acertado=false;
+            while (acertado==false)
+            {
+                lectura=prompt("Introduce un número");
+                lectura=parseInt(lectura);
+                if (lectura==clave)
+                {
+                    acertado=true;
+                    document.write("Acertaches " + lectura+ "!!<br>");
+
+                }
+                else
+                {
+                    document.write("Segue intentado!!<br>");
+                    fallos++;
+                }
+            }
+            if (fallos<5)
+            {
+                document.write("Aínda non eres tan malo");
+            }
+            else
+            {
+                document.write("Eres malísimo");
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>CONXUNTOS</title>
+    </head>
+    <body>
+        <script>
+            const lista=new Set();
+            var elemento=0;
+            var array=new Array();
+            var respuesta="S";
+            while(respuesta=="S" || respuesta=="s")
+            {
+                elemento=parseInt(prompt("Introduce un elemento de la lista"));
+                lista.add(elemento);
+                respuesta=prompt("Quieres seguir?");
+            }
+            array=[...lista];
+            for(let i=0;i<lista.size;i++)
+            {
+                document.write(`${array[i]} <br><hr>`);
+            }
+        </script>
+    </body>
+</html>

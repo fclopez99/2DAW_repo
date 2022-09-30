@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>FONDO EN CSS</title>
+        <style>
+            #fondo{
+                position:fixed;
+                left:0;
+                top:0;
+                width:100%;
+                height:100%;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            var rojo=parseInt(prompt("Introduce valor para tono rojo"));
+            var verde=parseInt(prompt("Introduce valor para verde"));
+            var azul=parseInt(prompt("Introduce valor para azul"));
+            document.write(`<div id='fondo' `+`style='background-color:rgb(${rojo},${verde},${azul})')>`+`</div>`);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>CIFRADO CESAR</title>
+ 
+    </head>
+    <body>
+            <script>
+                let texto=prompt("Introduce o texto a cifrar");
+                let clave;
+                do 
+                {
+                    clave=prompt("Introduce a clave numérica");
+                    if(isNaN(Number(clave))){
+                        alert("Non pasaches un número");
+                    }
+                }while(isNaN(Number(clave)));
+                clave=parseInt(clave);
+                for(let letra of texto)
+                {
+                    let cifra=letra.charCodeAt(letra)+clave;
+                    document.write(String.fromCharCode(cifra));
+                }
+            </script>
+    </body>
+</html>
