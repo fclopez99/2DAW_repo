@@ -1,0 +1,71 @@
+/* Config */
+$color-bg: #111;
+$color-particle: rgba(255,255,255,1);
+$spacing: 2560px;
+$time-1: 80s;   $time-2: 60s;   $time-3: 40s;   $time-4: 20s;
+$time-5: 80s;   $time-6: 60s;   $time-7: 40s;   $time-8: 20s;
+$photo: "https://images.unsplash.com/photo-1562729562-679ab5311bbf?dpr=1&auto=format&fit=crop&w=1920&h=1080&q=100&cs=tinysrgb&crop=";
+$photo: "https://images.unsplash.com/photo-1482097623218-813ddc8d7046?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80"; 
+
+/* Pauls awesome mixin */
+@function particles($max) {
+   $val: 0px 0px $color-particle;
+   @for $i from 1 through $max {
+      $val: #{$val},
+      random($spacing)+px random($spacing)+px $color-particle;
+   }
+   @return $val;
+}
+
+@mixin particles($max) {
+   box-shadow: particles($max);
+}
+
+/* Styles */
+html, body { height: 100%; }
+body { display: flex; justify-content: start; align-items: start; font-size: 1.5rem; overflow: hidden; font-family:verdana; padding-left:1rem; }
+#title { font-family: cooper, arial; color:hsla(0,0%,100%,0.2) }
+.page-bg, .animation-wrapper { position: fixed; top: 0; left: 0; width: 100%; height: 100%; }
+.page-bg { background: $color-bg url($photo) no-repeat top center; background-size: cover; z-index: -1; }
+
+.particle, .particle:after { background: transparent; }
+.particle:after { position: absolute; content: ""; top: $spacing; }
+
+.particle-1 { animation: animParticle1 $time-1 linear infinite; @include particles(600); height: 1px; width: 1px; }
+.particle-2 { animation: animParticle2 $time-2 linear infinite; @include particles(400); height: 3px; width: 3px; border-radius: 1px; opacity:0.8 }
+.particle-3 { animation: animParticle3 $time-3 linear infinite; @include particles(200); height: 5px; width: 5px; border-radius: 2px; opacity:0.6 }
+.particle-4 { animation: animParticle4 $time-4 linear infinite; @include particles(100); height: 8px; width: 8px; border-radius: 4px; opacity:0.3 }
+.particle-5 { animation: animParticle5 $time-5 linear infinite; @include particles(600); height: 1px; width: 1px; }
+.particle-6 { animation: animParticle6 $time-6 linear infinite; @include particles(400); height: 3px; width: 3px; border-radius: 1px; }
+.particle-7 { animation: animParticle7 $time-7 linear infinite; @include particles(200); height: 5px; width: 5px; border-radius: 2px; opacity:0.8 }
+.particle-8 { animation: animParticle8 $time-8 linear infinite; @include particles(100); height: 8px; width: 8px; border-radius: 4px; opacity:0.6 }
+
+.particle-1:after { @include particles(600); height: 1px; width: 1px; }
+.particle-3:after { @include particles(400); height: 5px; width: 5px; border-radius: 2px; }
+.particle-2:after { @include particles(200); height: 3px; width: 3px; border-radius: 1px; }
+.particle-4:after { @include particles(100); height: 8px; width: 8px; border-radius: 4px; }
+.particle-5:after { @include particles(600); height: 1px; width: 1px; }
+.particle-6:after { @include particles(400); height: 5px; width: 5px; border-radius: 2px; }
+.particle-7:after { @include particles(200); height: 3px; width: 3px; border-radius: 1px; }
+.particle-8:after { @include particles(100); height: 8px; width: 8px; border-radius: 4px; }
+
+@keyframes animParticle1 { from { transform: translate(0px, -$spacing); } to { transform: translate(-800px, 0); } }
+@keyframes animParticle2 { from { transform: translate(0px, -$spacing); } to { transform: translate(-400px, 0); } }
+@keyframes animParticle3 { from { transform: translate(0px, -$spacing); } to { transform: translate( 400px, 0); } }
+@keyframes animParticle4 { from { transform: translate(0px, -$spacing); } to { transform: translate( 800px, 0); } }
+@keyframes animParticle5 { from { transform: translate(0px, -$spacing); } to { transform: translate( 800px, 0); } }
+@keyframes animParticle6 { from { transform: translate(0px, -$spacing); } to { transform: translate( 400px, 0); } }
+@keyframes animParticle7 { from { transform: translate(0px, -$spacing); } to { transform: translate(-400px, 0); } }
+@keyframes animParticle8 { from { transform: translate(0px, -$spacing); } to { transform: translate(-800px, 0); } }
+
+.page-wrapper { color: #fff; z-index: 2; }
+
+.codepen-promo { bottom: 30px; display: block; position: absolute; right: 30px; z-index: 99; text-decoration: none; font-size:clamp(10px,7vmin,20px); }
+.codepen-promo:active, .codepen-promo:link, .codepen-promo:visited { color:#A6F; }
+.codepen-promo:hover { color:#CAF; }
+.codepen-promo-image { width: 100%; }
+
+.unsplash-promo {
+  bottom: 30px; display: block; position: absolute; left: 30px; width: 400px; z-index: 99; text-decoration: none; font-size:clamp(10px,7vmin,20px); }
+.unsplash-promo:active, .unsplash-promo:link, .unsplash-promo:visited { color: #dff; }
+.unsplash-promo:hover { color:#fbb; }
