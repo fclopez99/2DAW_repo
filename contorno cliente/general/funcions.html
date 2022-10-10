@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Funcións</title>
+    </head>
+    <body>
+        <script>
+            document.write("callback");
+            //callback
+            /*function primera(segunda){
+                segunda();
+                alert("Primera función");
+            }
+
+            function segunda(){
+                alert("segunda función");
+            }
+
+            primera(segunda);
+            segunda();*/
+
+            document.write("Recursividad");
+
+            /*var numero = parseInt(prompt("Escriba un número para hallar el factorial"));
+            var factorial = 1
+
+            for (i=numero;i>0;i--){
+                factorial *= i;
+            }
+            document.write(factorial);*/
+
+            function factorial(numero){
+                if (numero <= 1){
+                    return 1
+                }
+                else {
+                    return numero*factorial(numero-1);
+                }
+            }
+
+            var numero = parseInt(prompt("Introduce un número: "));
+            document.write(factorial(numero));
+
+        </script>
+    </body>
+</html>

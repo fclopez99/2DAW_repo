@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Comprobación de anagramas</title>
+    </head>
+    <body>
+        <script>
+            var palabra = prompt("Introduce a primeira cadena: ");
+            var posibleAnagrama = prompt("Introduce un posible anagrama: ");
+
+            function esAnagrama(palabra, posibleAnagrama){
+                palabra = palabra.toLowerCase();
+                posibleAnagrama = posibleAnagrama.toLowerCase();
+                palabra = palabra.split("");
+                posibleAnagrama = posibleAnagrama.split("");
+
+                palabra = palabra.sort();
+                posibleAnagrama = posibleAnagrama.sort();
+                palabra = palabra.join("");
+                posibleAnagrama = posibleAnagrama.join("");
+
+                if(palabra === posibleAnagrama){
+                    return "Son anagramas";
+                }else{
+                    return "No son anagramas";
+                }
+            }
+            //document.write(palabra);
+            //document.write(posibleAnagrama);
+            document.write(esAnagrama(palabra,posibleAnagrama));
+
+            
+        </script>
+    </body>
+</html>

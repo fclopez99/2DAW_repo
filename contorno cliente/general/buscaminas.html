@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Juego buscaminas.</title>
+    </head>
+    <body>
+        <table border="1em">
+            <script>
+                var filas = parseInt(prompt("Introduce o número de filas do tablero: "));
+                var columnas = parseInt(prompt("Introduce o número de comlumnas do tablero: "));
+                var num_minas = parseInt(prompt("Introduce o numero de minas a colocar: "));
+                var pos_mina = filas*columnas;
+
+                for (i = 1; i <= filas ; i++) {
+                    document.write(`<tr>`);
+                    for(j = 1; j <= columnas; j++){
+                        document.write(`<td>&nbsp;</td>`);
+                    }
+                    document.write(`</tr>`);
+                }
+
+                var tablero = new Array(2);
+                for(let a = 0 ; a < 2 ; a++ ){
+                    tablero[i]=new Array(4);
+                }
+                for (let b = 0 ; b < 2 ; b++ ){
+                    for(let c = 0 ; c < 4 ; c++ ){
+                        posicion = parseInt(Math.random(pos_mina));
+                        tablero[b][c] = numero;
+                    }
+                }
+                
+
+                var i = 0;
+                var j = 0;
+
+                
+                
+
+
+            </script>
+        </table>
+    </body>
+</html>
