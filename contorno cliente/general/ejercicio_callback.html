@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Ejercicio funcions callback</title>
+    </head>
+    <body>
+        <script>
+            function primerwrite() {
+                document.write("Hola Juan, ");
+            }
+            function segundowrite(tercerwrite){
+                tercerwrite();
+                document.write("tal estás?");
+            }
+            function tercerwrite(){
+                document.write("¿que ");
+            }
+
+            primerwrite();
+            segundowrite(tercerwrite);
+        </script>
+    </body>
+</html>
