@@ -17,7 +17,7 @@
                             if($j == 110){
                                 echo "<br/>";
                             }
-                           echo "*"; 
+                            echo "*"; 
                         }
                         echo "</p>";
                     }

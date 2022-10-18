@@ -16,11 +16,12 @@
         <?php
             $articulo= $_POST["articulo"];
             $precio_total = 0;
+            echo "<h1>Artículos comprados</h1>";
             foreach ($articulo as $indice => $valor){
-                echo $indice."    ".$valor;
+                echo "<li>".$indice." , precio: ".$valor."€</li>";
                 $precio_total = $precio_total + $valor;
             }
-            echo "<br>".$precio_total;
+            echo "<br><strong>Total: ".$precio_total."€</strong>";
 
         ?>
     </body>
