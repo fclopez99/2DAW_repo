@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>LIBROS</title>
+    </head>
+    <BODY>
+        <script>
+            var libros = [];
+            var lectores = [];
+            var nome;
+            var apelidos;
+            var dni;
+            var titulo;
+            var autor;
+            var prestado;
+            var lectorin;
+            class lector{
+                nombre;
+                apelidos;
+                dni;
+                constructor(n,a,d){
+                    this.nombre=n;
+                    this.apelidos=a;
+                    this.dni=d;
+                }
+                get nombre(){
+                    return this.nombre;
+                }
+                get apelidos(){
+                    return this.apelidos;
+                }
+                get dni(){
+                    return this.dni;
+                }
+            }
+            class libro{
+                titulo;
+                autor;
+                prestado;
+                editorial;
+                lector;
+                constructor(t,a,e,l,p)
+                {
+                    this.titulo=t;
+                    this.autor=a;
+                    this.prestado=p;
+                    this.editorial=e;
+                    this.lector=l;
+                }
+                imprimirLibro(){
+                    return `(${this.titulo}, ${this.autor}, ${this.editorial}, ${l.nombre})`;
+                }
+                estaPrestado(){
+                    return this.prestado;
+                }
+                verLector(){
+                    return this.lector;
+                } 
+            }
+            for (let i=0;i<2;i++)
+            {
+                nome=prompt("Introduce o nome do lector");
+                apelidos=prompt("Introduce apelidos do lector");
+                dni=prompt("Introduce o dni do lector");
+                usuario=new lector(nome,apelidos,dni);
+                lectores[i]=usuario;
+            }
+            for (let i=0;i<3;i++)
+            {
+                lectorin=new Object;
+                titulo=prompt("Introduce o título do libro");
+                autor=prompt("Introduce o autor do libro");
+                editorial=prompt("Introduce a editorial");
+                let respuesta=prompt("¿Prestas este libro?(s/n)");
+                if (respuesta==="s")
+                {
+                    lectorin=lectores[0];
+                    prestado=true;
+                }
+                else
+                {
+                    prestado=false;
+                }
+                ejemplar=new libro(titulo, autor, editorial,lectorin,prestado);
+                libros[i]=ejemplar;
+            }
+            for (let i=0;i<2;i++)
+            {
+                document.write(lectores[i].nombre + " ");
+            }
+            for (let i=0;i<3;i++)
+            {
+                document.write(libros[i].titulo + " " + libros[i].lector.nombre + " ");
+            }
+        </script>
+    </BODY>
+</html>
+</html>

@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Objetos js 2</title>
+    </head>
+    <body>
+        <script>
+            class Persona {
+                constructor(nombre, edad, dni, sexo, peso, altura){
+                this.nombre = nombre;
+                this.edad = edad;
+                this.dni = dni;
+                this.sexo = sexo;
+                this.peso = peso;
+                this.altura = altura;
+                }
+
+                setNombre(nombre){
+                    this.nombre = nombre;
+                }
+                setEdad(edad){
+                    this.edad = edad;
+                }
+                setDNI(dni){
+                    this.dni = dni;
+                }
+                setSexo(sexo){
+                    this.sexo = sexo;
+                }
+                setPeso(peso){
+                    this.peso = peso;
+                }
+                setAltura(altura){
+                    this.altura = altura;
+                }
+
+                getDatos(){
+                    
+                }
+
+                
+                
+            }
+            var nombre = prompt("Introduce el nombre: ");
+            var edad = parseInt(prompt("Introduce la edad: "));
+            var dni = parseInt(prompt("Introduce el dni: "));
+            var sexo = prompt("Introduce el sexo: (H,M)");
+            var peso = prompt("Introduce el peso: (kg)");
+            var altura = prompt("Introduce la altura: (m)");
+        </script>
+    </body>
+</html>
