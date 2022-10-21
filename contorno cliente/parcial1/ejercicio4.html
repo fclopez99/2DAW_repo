@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Ejercicio 4 - parcial 1</title>
+    </head>
+    <body>
+        <script>
+            const empleados = new Map();
+            var dni = "";
+            var nombre = "";
+            var apellidos = "";
+
+            function darAlta(){
+                for (let i= 0 ; i<10; i++){
+                    nome=prompt("Introduce o nome do empregado a dar de alta");
+                    apelidos=prompt("Introduce apelidos do empregado  a dar de alta");
+                    dni=prompt("Introduce o dni do empregado  a dar de alta");
+                    empleados.set(dni,nombre, apellidos);
+                }
+            }
+
+            function existe(){
+                dni=prompt("Introduce un dni a localizar: ");
+                if (!empleados.has(dni)){
+                    alert("Elemento non atopado");
+                }
+                else {
+                    alert(empleados.get(dni));
+                }
+            }
+
+            document.write(darAlta());
+            document.write(existe());
+            document.write(empleados);
+            
+        </script>
+    </body>
+</html>

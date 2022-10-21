@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Ejercicio 1 - Parcial 1</title>
+    </head>
+    <body>
+        <script>
+            var cadena = prompt("Introduce a cadena co formato solicitado: (nome:apelidos:teléfono:correo electrónico:código postal)");
+
+            var array = cadena.split(":");
+            var codigo_postal = array[array.length -1];
+            var apelidos = array[1];
+            var correo_electronico = array[3];
+            var array_correo = correo_electronico.split("@");
+            var servidor = array_correo[1];
+
+            document.write("Código postal: "+ codigo_postal+`<br>`);
+            document.write("Apelidos: "+ apelidos + `<br>`);
+            document.write("Correo electrónico: "+ correo_electronico +`<br>`);
+            document.write("Servidor de cuenta de correo: "+ servidor +`<br>`);
+        </script>
+    </body>
+</html>
