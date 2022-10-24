@@ -1,0 +1,51 @@
+<H2><A NAME=20>Address</A></H2>This tag is for address information, signatures, etc, normally at
+the top or bottom of a document. typically, it is italic and/or right
+justified or indented. The  format is:
+<pre>		<ADDRESS> text ... </ADDRESS>
+
+</pre>
+<H2>Highlighting</H2>The highlighted phrase tags may occur in normal text, and may be nested.
+For each opening tag there must follow a corresponding closing tag.
+NOT CURRENTLY USED.
+<pre>
+		<HP1>...</HP1>   <HP2>... </HP2> etc.
+</pre>
+<H2>Glossaries</H2>A glosary (or definition list) is a list of paragraphs each of which
+has a short title alongside it.  Apart from glossaries, this format
+is useful for presenting a set of named elements to the reader. The
+format is as follows:
+<pre>
+		<DL>
+		<DT>Term<DD>definition pagagraph
+		<DT>Term2<DD>Definition of term2
+		</DL>
+
+</pre>
+<H2>Lists</H2>A list is a sequence of paragraphs, each of which is preceded by a
+special mark or sequence number. The format is:
+<pre>
+		<UL>
+		<LI> list element
+		<LI> another list element ...
+		</UL>
+
+</pre>The opening list tag  must be immediately followed by the first list
+element. The representation of the list is not defined here, but a
+bulleted list for unordered lists,  and a  sequence of numbered paragraphs
+for an ordered list would be quite appropriate.  Other possibilities
+for interactive display include embedded scrollable browse panels.
+</P>
+<P>
+Opening list tags are:
+<DL>
+<DT>UL
+<DD> A list multi-line paragraphs, typically separated by some white
+space.
+<DT>MENU
+<DD> A list of smaller paragraphs. Typically one line per item, with
+a style more compact than UL.
+<DT>DIR
+<DD> A list of short elements, less than one line. Typical style is
+to arrange in four columns or provide a browser, etc.
+</DL>
+the closing tag must obviously match the opening tag.

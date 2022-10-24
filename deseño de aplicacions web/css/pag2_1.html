@@ -1,0 +1,60 @@
+<H2><A NAME=7>Plaintext</A></H2>
+This tag indicates that all following text is to be taken litterally,
+up to the end of the file.  Plain text is designed to be represented
+in the same way as example XMP text, with fixed width character and
+significant line breaks. Format:
+<XMP>			<PLAINTEXT></PLAINTEXT>
+
+</XMP>This tag allows the rest of a file to be read efficiently without
+parsing. Its presence is an optimisation. There is no closing tag.
+<H2><A NAME=8>Example sections</A></H2>These styles allow text of fixed-width characters to be embedded absolutely
+as is into the document. The format is:
+<pre>		<LISTING>
+			...
+		</LISTING>
+
+</pre>The text between these tags is to be portrayed in a fixed width font,
+so that any formatting done by character spacing on successive lines
+will be maintained. Between the opening and closing tags:
+<UL>
+<LI>The text may contain any ISO Latin printable characters, including
+the tag opener, so long as it does not contain the closing tag in
+full.
+<LI>Line boundaries are significant, and are to be interpreted as a move
+to the start of a new line.
+<LI>The ASCII Horizontal Tab (HT) character should be interpreted as the
+smallest positive nonzero number of spaces which will leave the number
+of characters so far on the line as a multiple of 8. Its use is not
+recommended however.
+</UL>The LISTING tag is portrayed so that at least 132 characters will
+fit on a line.  The XMP tag is portrayed in a font so that at least
+80 characters will fit on a line but is otherwise identical to LISTING.
+The examples of markup are here given using the XMP tag.
+<H2>Paragraph</H2>This tag indicates a new paragraph. The exact representation of this
+(indentation,  leading, etc) is not defined here, and may be a function
+of other tags, style sheets etc. The format is simply
+</P>
+<pre>		
+
+<P>
+
+</pre>(In SGML terms, paragraph elements are transmitted in minimised form).
+<H2><A NAME=15>Headings</A></H2>Several levels (at least six) of heading are supported. Note that
+a hypertext document tends to need less levels of  heading than a
+normal document whose only structure is given by the nesting of headings.
+H1 is the highest level of heading, and is recommened for the start
+of a hypertext node.   It is suggested that the first heading be one
+suitable for a reader who is already browsing in related information,
+in contrast to the <A NAME=6 HREF=#2>title</A> tag which should identify the node in a wider
+context.
+<pre>		<H1>, <H2>, <H3>, <H4>, <H5>, <H6>
+
+</pre>These tags are kept as defined in the CERN SGML guide. Their definition
+is completely historical, deriving from the <A NAME=17 HREF=AAP.html>AAP</A> tag set.  A difference
+is that HTML documents allow headings to be terminated by  closing
+tags:
+<pre>		<H2>Second level heading</h2>
+
+</pre>
+
+</body>

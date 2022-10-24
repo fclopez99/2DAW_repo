@@ -1,0 +1,23 @@
+HTML TAGS concepto da página:
+
+
+- página principal.
+	- contenido:
+		- Definición + conceptos de html tags.
+	- estructura:
+		- Navegación lateral por niveles.
+		- titulo centrado con fondo a color.
+- página 1:
+	- contenido:
+		- etiquetas modificadoras do propio documento. (title, base addres, isindex)
+	- estructura: 
+		- parrafos justificados.
+		- ejemplos de código con area coloreada.
+- página 2.1:
+	- contenido:
+		- etiquetas pertenecientes a la estructura de la página.
+		(Plaintext, example sections, paragraph, headdings)
+- página 2.2:
+	- contenido: 
+		(anchors, highlighting, Glossaries, lists).
+	

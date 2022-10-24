@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Clases Repaso Objetos Ej: 3</title>
+    </head>
+    <body>
+        <script>
+            function vehiculo(marca, modelo, color, año){
+                this.marca = marca;
+                this.modelo = modelo;
+                this.color = color;
+                this.año = año;
+            }
+            function furgoneta(pasajeros){
+                vehiculo.call(this, marca, modelo, color, año);
+                this.pasajeros = pasajeros;
+            }
+
+            furgoneta.prototype = new vehiculo();
+            furgoneta.prototype.constructor = furgoneta;
+
+
+            function todoterreno(traccion){
+                vehiculo.call(this, marca, modelo, color, año);
+                this.traccion = traccion;
+            }
+
+            todoterreno.prototype = new vehiculo();
+            todoterreno.prototype.constructor = todoterreno;
+
+            var furgoneta1 = new furgoneta('Ford', 'transit', 'blanco', '2017');
+            var furgoneta2 = new furgoneta('Peugeot', 'partner', 'gris', '2015');
+
+            furgoneta1.pasajeros = 2;
+            furgoneta2.pasajeros = 7;
+
+
+            var furgonetas = [furgoneta1, furgoneta2];
+            document.write('<br /><br />--------------furgonetas-------------');
+            for (x of furgonetas) {
+                document.write('<br />furgoneta → ' + x.marca +" "+ x.modelo +"Color : "+ x.color);
+                if (x.pasajeros > 0) {
+                    document.write('<br />----pasajeros de ' + x.marca + x.modelo+' :'+x.pasajeros);
+                    }
+            }
+        </script>
+    </body>
+</html>
