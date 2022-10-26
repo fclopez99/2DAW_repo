@@ -8,9 +8,9 @@ function comprobar_usuario($nombre, $clave){
 		$usu['rol'] = 0;
 		return $usu;
 	}elseif($nombre === "admin" and $clave === "1234"){
-		 $usu['nombre'] = "admin";
-		 $usu['rol'] = 1;
-		 return $usu;
+		$usu['nombre'] = "admin";
+		$usu['rol'] = 1;
+		return $usu;
 	}else return false;
 	/* a funcion vai devolver un arrai usu co nome do usuario e o rol, en caso de 
 	que os valores sexan correctos ou un false, en caso contraio 
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {  	 /* usamos o POST porque no formul
 		$err = true;
 		$usuario = $_POST['usuario'];
 	}else{	/*se atinamos co usuario e contrasinal, daquela poderemos entrar na paxina principal e creamos previamente 
-		     a variable de sesión, inicializamos sesión, creamos a variable co dato do usuario*/
+		    a variable de sesión, inicializamos sesión, creamos a variable co dato do usuario*/
 		session_start();
 		$_SESSION['usuario'] = $_POST['usuario'];
 		header("Location: sesiones1_principal.php");	/*redireccionamos a páxina principal*/
