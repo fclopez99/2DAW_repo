@@ -3,7 +3,7 @@
         <title></title>
     </head>
     <body>
-        <H2><A NAME=2>Title</A></H2>
+        <H2 id="title">Title</H2>
 The title of a document is given between title tags:
 <code>		<TITLE> ... </TITLE>
 
@@ -20,7 +20,7 @@ or highlighting. the title may be used to identify the node in a history
 list, to label the window displaying the node, etc. It is not normally
 displayed in the text of a document itself. Contrast titles with <A NAME=16 HREF=#15>headings</A>
 .
-<H2>Next ID</H2>Obsolete: NeXT Browser only.  May be ignored. This tag takes a  single
+<H2 id="next_id">Next ID</H2>Obsolete: NeXT Browser only.  May be ignored. This tag takes a  single
 attribute which is the number of the next document-wide numeric identifier
 to be allocated (not good SGML). Note that when modifying a document,
 old anchor ids should not be reused, as there may be references stored
@@ -30,7 +30,8 @@ Browser software may ignore this tag. Example of use:
 <code>		<NEXTID 27/>
 
 </code>
-<H2><A NAME=11>Base Address</A></H2><A NAME=9 HREF=#4>Anchors</A> specify addresses of other documents, in a from relative to
+<H2 id="base_address">Base Address</H2>
+Anchors specify addresses of other documents, in a from relative to
 the address of the current document. Normally, the address of a document
 is known to the browser because it was used to access the document.
 However, is a document is mailed, or is somehow visible with more
@@ -40,7 +41,8 @@ base address in order to correctly deduce external document addresses.
 </P>
 <P>
 The format of this tag is not yet specified. NOT CURRENTLY USED
-<H2><A NAME=4>Anchors</A></H2>The format of an anchor is as follows:
+<H2 id="anchors"><A NAME=4>Anchors</A></H2>
+The format of an anchor is as follows:
 <code>		<A NAME=xxx HREF=XXX> ... </A>
 
 </code>The text between the opening tag and the closing tag is either the
@@ -68,7 +70,7 @@ the W3 team. The default relationship if none other is given is void.
 </DL>
 All attributes are optional, although one of NAME and HREF is necessary
 for the anchor to be useful.
-<H2><A NAME=18>IsIndex</A></H2>This tag informs the reader that the document is an index document.
+<H2 id="is_index">IsIndex</H2>This tag informs the reader that the document is an index document.
 As well as reading it, the reader may use a keyword search.
 </P>
 <P>

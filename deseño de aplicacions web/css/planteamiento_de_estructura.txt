@@ -9,7 +9,7 @@ HTML TAGS concepto da página:
 		- titulo centrado con fondo a color.
 - página 1:
 	- contenido:
-		- etiquetas modificadoras do propio documento. (title, base addres, isindex)
+		- etiquetas modificadoras do propio documento. (title, base addres, isindex, next ID)
 	- estructura: 
 		- parrafos justificados.
 		- ejemplos de código con area coloreada.
