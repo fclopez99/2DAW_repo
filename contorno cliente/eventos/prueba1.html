@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>eventos con chamada a funcions</title>
+    </head>
+    <body>
+        <script>
+            function nombreHola(){
+                var nombre = prompt("Introduce o teu nombre: ");
+                document.write(`${nombre}` + " Hola mundo" + `<br>`);
+            }
+        </script>
+        <form>
+            <input type="button" value="boton funcion" onclick="nombreHola()">
+        </form>
+    </body>
+</html>

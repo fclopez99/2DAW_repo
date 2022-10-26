@@ -1,0 +1,31 @@
+
+<html>
+    <head>
+        <title>ejemplo multiple</title>
+    </head>
+    <body>
+        <script>
+            function pedirnombre(){
+                nome = prompt("Introduce o teu nome: ");
+            }
+            function pedirapelidos(){
+                apelidos = prompt("Introduce os teus apelidos: ");
+            }
+            function invert(){
+                document.getElementById('react').innerHTML=`${apelidos}, ${nome}`;
+            }
+        </script>
+        <form>
+            <input type="button" value="Int Nombre" onclick="pedirnombre()">
+            <input type="button" value="Int Apelidos" onclick="pedirapelidos()">
+            <input type="button" value="Mostrar" onclick="invert()">
+        </form>
+        <div id="react" style="width: 235px; height:60px; border:thin solid silver"
+        onmouseover="this.style.backgroundColor='yellow';
+        this.onfocus=invert()"
+        
+        onmouseout="this.style.backgroundColor='white';
+        this.innerHTML=''">
+        </div>
+    </body>
+</html>
