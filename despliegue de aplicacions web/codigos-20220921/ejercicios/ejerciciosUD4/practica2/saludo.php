@@ -1,8 +1,9 @@
 <?php
+
 include "comprobar.php";
 $hayPreferencias=true;
 $array=null;
-if(hayCookie()==false){
+if(haySesion()==false){
     if(hayGet()==false){
         $hayPreferencias=false;
     }
@@ -11,7 +12,7 @@ if(hayCookie()==false){
     }
 }
 else{
-    $array=$_COOKIE;
+    $array=$_SESSION;
 }
 if($hayPreferencias==false)
     header("location:index.php");
@@ -19,11 +20,13 @@ else{
     foreach($array as $indice=>$valor){
         $$indice=$valor;
     }
-    setcookie("nombre",$nombre,time()+60*60*24);
-    setcookie("apellidos",$apellidos,time()+60*60*24);
-    setcookie("color_fondo",$color_fondo,time()+60*60*24);
-    setcookie("color_letra",$color_letra,time()+60*60*24);
-    setcookie("tipo_letra",$tipo_letra,time()+60*60*24);
+    
+    session_start();
+    $_SESSION["nombre"]=$nombre;
+    $_SESSION["apellidos"]=$apellidos;
+    $_SESSION["color_fondo"]=$color_fondo;
+    $_SESSION["color_letra"]=$color_letra;
+    $_SESSION["tipo_letra"]=$tipo_letra;
 }
 ?>
 <!doctype html>

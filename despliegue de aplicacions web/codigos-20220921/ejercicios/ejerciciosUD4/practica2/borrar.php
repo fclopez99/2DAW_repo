@@ -1,8 +1,4 @@
 <?php
-setcookie("nombre",false);
-setcookie("apellidos",false);
-setcookie("color_fondo",false);
-setcookie("color_letra",false);
-setcookie("tipo_letra",false);
+session_destroy();
 header("location:index.php");
 ?>

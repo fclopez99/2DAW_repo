@@ -1,10 +1,10 @@
 <?php
-function hayCookie(){
-    return isset($_COOKIE["nombre"])&& 
-    isset($_COOKIE["apellidos"])&& 
-    isset($_COOKIE["color_fondo"])&&
-    isset($_COOKIE["color_letra"])&&
-    isset($_COOKIE["tipo_letra"]);
+function haySesion(){
+    return isset($_SESSION["nombre"])&& 
+    isset($_SESSION["apellidos"])&& 
+    isset($_SESSION["color_fondo"])&&
+    isset($_SESSION["color_letra"])&&
+    isset($_SESSION["tipo_letra"]);
 }
 function hayGet(){
     return isset($_GET["nombre"])&& 
