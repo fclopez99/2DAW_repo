@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Ejemplo movimiento de ratón</title>
+        <style>
+            div{
+                background-color: blue;
+                color: white;
+                position: fixed;
+                left: 0;
+                top: 0;
+                padding: 4px;
+                width: 100px;
+                height: 20px;
+            }
+
+            
+        </style>
+    </head>
+    <body>
+        <div id="mobil">
+            mueve el ratón
+        </div>
+        <script>
+            document.body.addEventListener("mouseover", function(ev){
+                let anacomobil = document.getElementById("mobil");
+                anacomobil.style.left=ev.clientX+"px";
+                anacomobil.style.top=ev.clientY+"px";
+            });
+        </script>
+    </body>
+</html>

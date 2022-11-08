@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Arrastrar áreas js</title>
+        <style>
+            div{
+                border: 1px solid black;
+                padding: 1em;
+                position: fixed;
+                top: 20px;
+                width: 200px;
+                height: 100px;
+            }
+
+            #capa1{
+                left: 50px;
+                background-color: yellow;
+            }
+            #capa2{
+                left: 400px;
+            }
+
+            
+        </style>
+    </head>
+    <body>
+        <div id="capa1" draggable="true">son arrastrable</div>
+        <div id="capa2">Son o destino</div>
+        <script>
+            let area = document.getElementById("capa1");
+            let destino = document.getElementById("capa2");
+
+            area.addEventListener("drag", function(ev){
+                area.style.opacity=.5;
+            });
+            destino.addEventListener("dragenter",function(ev){
+                destino.style.backgroundColor="orange";
+            });
+            destino.addEventListener("dragleave",function(ev){
+                destino.style.backgroundColor="transparent";
+            });
+            area.addEventListener("dragend", function(ev){
+                area.style.opacity=1;
+                area.style.backgroundColor="transparent";
+            });
+            destino.addEventListener("dragover", function(ev){
+                ev.preventDefault();
+            });
+            destino.addEventListener("drop",function(ev){
+                document.body.removeChild(capa1);
+                destino.textContent="Conseguido.";
+                destino.style.backgroundColor="yellow";
+            });
+        </script>
+    </body>
+</html>
