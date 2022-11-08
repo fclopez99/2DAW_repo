@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>IMAXES E EVENTOS ANULADOS</title>
+    <style>
+        div{
+            position:fixed;
+            left:0;
+            top:0;
+            height: 50%;
+            width: 100%;
+            background-color: gray;
+        }
+    </style>
+<body>
+    <div>
+            <img id="foto1" src="a.png" width="10%" height="50%">
+            <img id="foto2" src="b.png" width="10%" height="50%">
+            <img id="foto3" src="c.png" width="10%" height="50%">
+    </div>
+    <script>
+        function alertaCapa(){
+            alert('Fixeches click en capa');
+            capa.removeEventListener("click",alertaCapa);
+        }
+        function alertaImagen1(){
+            alert('Fixeches click en imagen1');
+            imagen1.removeEventListener("click",alertaImagen1);
+        }
+        function alertaImagen2(){
+            alert('Fixeches click en imagen2');
+            imagen2.removeEventListener("click",alertaImagen2);
+        }
+        function alertaImagen3(){
+            alert('Fixeches click en imagen3');
+            imagen3.removeEventListener("click",alertaImagen3);
+        }
+        let capa=document.querySelector("div"); //Utilizo os tags
+        let imagen1=document.getElementById("foto1"); //Utilizo ids
+        let imagen2=document.getElementById("foto2");
+        let imagen3=document.getElementById("foto3");
+        capa.addEventListener("click",alertaCapa);
+        imagen1.addEventListener("click",alertaImagen1);
+        imagen2.addEventListener("click",alertaImagen2);
+        imagen3.addEventListener("click",alertaImagen3);
+    </script>
+</body>
+</html>
