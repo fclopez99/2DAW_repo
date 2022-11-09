@@ -1,10 +1,15 @@
 <html>
     <head>
         <title>Ejercicio_1 formularios</title>
+        <style>
+            body{
+                background-color: lightslategrey;
+            }
+        </style>
     </head>
     <body>
         <form id="formulario" action="paginadestino.php">
-            <label for="pwd">Password: </label> 
+            <label for="pwd">Password: </label> <br>
             <input type="password" id="pwd" name="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos un número, una mayúscula, una minúscula. Además debe contener 8 o más caracteres">
             <input type="submit" id="envio">
         </form>
