@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Ejemplo formularios</title>
+    </head>
+    <body>
+        <div id="contorno" style="background-color: orange; text-align: center; border: 2px solid grey;">
+            <select id="aprobar">
+                <option value="10">Saco 10 en DWEC</option>
+                <option value="9">Saco 9 en DWEC</option>
+                <option value="8">Saco 8 en DWEC</option>
+            </select>
+        </div>
+        <script>
+            let recollida = getElementById("contorno");
+            elemento.addEventListener("dblclick", mostrar);
+            function mostrar(){
+                let elemento = document.getElementById("aprobar");
+                for (let i=0;i<elemento.options.length;i++){
+                    alert("valor de la opción "+ elemento.options[i].value)
+                }
+                let sel = elemento.selectedIndex;
+                alert("Valor de la opción seleccionada "+ elemento[i].value);
+            }
+        </script>
+    </body>
+</html>

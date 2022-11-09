@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Ejemplo formularios</title>
+    </head>
+    <body>
+        <div id="checks" style="background-color: orange; text-align: center; border: 2px solid grey;">
+            <input type="checkbox" id="preguntaAS" name="pregunta" value="asc"/>
+            <label for="preguntaAS">Piso con ascensor</label>
+            <input type="checkbox" id="preguntaAM" name="pregunta" value="amb"/>
+            <label for="preguntaAM">Piso amueblado</label>
+        </div>
+        <script>
+            let recollida = document.getElementById("checks");
+            recollida.addEventListener("dblclick", mostrar);
+            function mostrar(){
+                let elementos=document.getElementsByName("pregunta");
+                for (let i=0;i<elementos.length;i++){
+                    if(elementos[i].checked==true){
+                    alert("Valor del elemento marcado "+ elementos[i].value);
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Ejemplo formularios</title>
+    </head>
+    <body>
+        <input type="text" id="texto">
+        <script>
+            elemento = document.getElementById("texto");
+            elemento.addEventListener("blur", mostrar);
+            function mostrar(){
+                alert(elemento.value);
+            }
+        </script>
+    </body>
+</html>

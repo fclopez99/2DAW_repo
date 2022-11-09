@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Ejemplo formularios</title>
+    </head>
+    <body>
+        <input type="radio" id="preguntaSi" name="pregunta" value="si"/>
+        <label for="preguntaSi">SI</label>
+        <input type="radio" id="preguntaNo" name="pregunta" value="no"/>
+        <label for="preguntaNo">NO</label>
+        <script>
+            document.body.addEventListener("dblclick", mostrar);
+            function mostrar(){
+                let elementos=document.getElementsByName("pregunta");
+                for (let i=0;i<elementos.length;i++){
+                    if(elementos[i].checked==true){
+                    alert("Valor del elemento marcado "+ elementos[i].value);
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
