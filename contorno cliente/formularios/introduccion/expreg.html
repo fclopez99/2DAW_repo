@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Ejemplo formularios</title>
+    </head>
+    <body>
+        <label for="caixa">Introduce o texto a validar: </label>
+        <input type="text" id="caixa" name="caixa">
+        <input type="submit" id="boton" value="enviar">
+        <script>
+            let botonpres = document.getElementById("boton");
+            let expresionreg = /casa/i;
+            let textocaixa = document.getElementById("caixa");
+            let informacion = [];
+
+            botonpres.addEventListener("click", function(){
+                informacion = expresionreg.exec(textocaixa.value);
+                document.write(informacion);
+            });
+        </script>
+    </body>
+</html>

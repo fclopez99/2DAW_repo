@@ -1,0 +1,5 @@
+contraseña con requisitos de complejidad.
+comprobacion de contraseñas con expresions regulares.
+usuario con letras e numeros.
+validacion de expresions regulares de correo electrónico.
+teléfono con expresións regulares.
