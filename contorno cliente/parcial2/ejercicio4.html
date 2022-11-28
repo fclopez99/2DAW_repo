@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Ejercicio_4 - parcial_2</title>
+    </head>
+    <body>
+        <input type="text" id="columnas" name="columnas" pattern="[0-9]{2}">
+        <label for="columnas">Columnas</label><br>
+        <input type="text" id="filas" name="filas" pattern="[0-9]{2}">
+        <label for="filas">Filas</label><br>
+        <input type="button" id="crear" name="crear" value="crear tabla" onclick="crear_tabla()">
+        <input type="reset" id="reset">
+    </body>
+        <script>
+            function crear_tabla(){
+                var columnas = document.getElementById("columnas");
+                var filas = document.getElementById("filas");
+                var i = 0;
+                var j = 0;
+                document.write(`<table border="1em">`);
+                for (i = 1; i <= filas ; i++) {
+                    document.write(`<tr>`);
+                        for(j = 1; j <= columnas; j++){
+                            document.write(`<td>&nbsp;</td>`);
+                        }
+                    document.write(`</tr>`);
+                }
+                document.write(`</table>`);
+            }
+        </script>
+    </table>
+</html>

@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Ejercicio_1 - parcial_2</title>
+        <style>
+            body{
+                text-align: center;
+                margin: 10%;
+                font-size: 3em;
+                color: navy;
+            }
+            p{
+                color: forestgreen;
+                font-size: 2em;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            let contador = 0;
+            function increase(){
+                contador = contador + 1;
+                document.getElementById("resultado").innerHTML=`${contador}`;
+            }
+            function decrease(){
+                contador = contador - 1;
+                document.getElementById("resultado").innerHTML=`${contador}`;
+            }
+            function reset(){
+                contador = 0;
+                document.getElementById("resultado").innerHTML=`${contador}`;
+            }
+        </script>
+        <div>
+            <h1>Counter</h1>
+            <p id="resultado">0</p>
+            <input type="button" id="decrease" value="decrease" onclick="decrease()">
+            <input type="button" id="reset" value="reset" onclick="reset()">
+            <input type="button" id="increase" value="increase" onclick="increase()">
+        </div>
+        
+    </body>
+</html>

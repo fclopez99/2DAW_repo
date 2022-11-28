@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>Ejercicio_2 - parcial_2</title>
+        <style>
+            h1{
+                text-align: center;
+                margin: 5%;
+            }
+            div{
+                border-radius: 5px;
+                text-align: center;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            #aplicacion, #presentacion, #sesion{
+                background-color: lime;
+                
+            }
+            #transporte{
+                background-color: yellow;
+            }
+            #red{
+                background-color: rgb(185, 4, 185);
+            }
+            #enlace{
+                background-color: lightskyblue;
+            }
+            #fisico{
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>LA PILA OSI</h1>
+        <div id="aplicacion" onclick="seleccionado('aplicacion')">
+            <h3>Nivel de Aplicación</h3>
+            <p>Servicios de red a aplicaciones</p>
+        </div>
+        <div id="presentacion" onclick="seleccionado('presentacion')">
+            <h3>Nivel de Presentación</h3>
+            <p>Representación de los datos</p>
+        </div>
+        <div id="sesion" onclick="seleccionado('sesion')">
+            <h3>Nivel de Sesión</h3>
+            <p>Comunicación entre dispositivos de la red</p>
+        </div>
+        <div id="transporte" onclick="seleccionado('transporte')">
+            <h3>Nivel de Transporte</h3>
+            <p>Conexión extremo-a-extremo y fiabilidad de los datos</p>
+        </div>
+        <div id="red" onclick="seleccionado('red')">
+            <h3>Nivel de Red</h3>
+            <p>Determinación de ruta e IP<br>(Direccionamiento lógico)</p>
+        </div>
+        <div id="enlace" onclick="seleccionado('enlace')">
+            <h3>Nivel de Enlace de Datos</h3>
+            <p>Direccionamiento físico (MAC y LLC)</p>
+        </div>
+        <div id="fisico" onclick="seleccionado('fisico')">
+            <h3>Nivel Físico</h3>
+            <p>Señal y tranmisión binaria</p>
+        </div>
+    </body>
+    <script>
+        function seleccionado(id){
+            capa = 0;
+            if (id = "aplicacion"){
+                capa=6;
+                alert(`Capa ${capa} do modelo OSI`)
+                document.getElementById("aplicacion").style.backgroundColor = "grey";
+            }
+            if (id = "presentacion"){
+                capa=5;
+                alert(`Capa ${capa} do modelo OSI`)
+                document.getElementById("presentacion").style.backgroundColor = "grey";
+            }
+            if (id = "sesion"){
+                capa=4;
+                alert(`Capa ${capa} do modelo OSI`)
+                document.getElementById("sesion").style.backgroundColor = "grey";
+            }
+            if (id = "transporte"){
+                capa=3;
+                alert(`Capa ${capa} do modelo OSI`)
+                document.getElementById("transporte").style.backgroundColor = "grey";
+            }
+            if (id = "red"){
+                capa=2;
+                alert(`Capa ${capa} do modelo OSI`)
+                document.getElementById("red").style.backgroundColor = "grey";
+            }
+            if (id = "enlace"){
+                capa=1;
+                alert(`Capa ${capa} do modelo OSI`)
+                document.getElementById("enlace").style.backgroundColor = "grey";
+            }
+            if (id = "fisico"){
+                capa=0;
+                alert(`Capa ${capa} do modelo OSI`)
+                document.getElementById("fisico").style.backgroundColor = "grey";
+            }
+        };
+    </script>
+</html>
