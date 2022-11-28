@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Ejercicio 1</title>
+    </head>
+    <body>
+        <script>
+            /*
+            Indicar al usuario que debe maximizar la pantalla si 
+            esta no lo está e imprimir en una tabla
+            el lenguaje del navegador utilizado y la página web actual.
+            */
+            let lenguaje = navigator.language;
+            let pagina = location.href;
+            let tabla = "<table border=\"1em\">";
+
+            if(innerWidth != 1873 && innerHeight != 969){
+                alert("Debes maximizar la pantalla");
+            }
+            else{
+                tabla += "<tr><td>"+lenguaje+"</td><td>"+pagina+"</td></tr></table>";
+            }
+        </script>
+    </body>
+</html>
