@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>DIV EN MOVEMENTO</title>
+        <style>
+            #cHola{
+                background-color: blue;
+                color:black;
+                position:fixed;
+                left:0;
+                top:0;
+                padding: 4px;
+                width: 100px;
+                height: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="cHola">HOLA</div>
+        <script>
+            document.body.addEventListener("mouseover",function(ev){
+                let anacomobil=document.getElementById("cHola");
+                anacomobil.style.left=ev.clientX+"px";
+                anacomobil.style.top=ev.clientY+"px";
+            })
+        </script>
+    </body>
+</html>

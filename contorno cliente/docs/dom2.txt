@@ -1,0 +1,16 @@
+Dadas dúas caixas de texto unha para introducir
+o nome e outra o apelido, cun botón co nome rellenar
+datos, o nome e os apelidos deben aparecer no medio
+dos datos dun párrafo previamente cargado.
+
+Ola nome e apelidos, gracias por encher este
+formulario. 
+
+Modificar o exercicio anterior para que os nomes
+introducidos e impresos no párrafo vaian almacenándose
+en un combo box. 
+
+Modificar o exercicio anterior para que recibamos
+pola caixa de texto a url dunha imaxe e se cree unha
+galería de imaxes con cada unha que vamos metendo. 
+Usa unha táboa de 3 columnas para esta galería. 

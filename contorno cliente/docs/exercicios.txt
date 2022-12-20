@@ -1,0 +1,23 @@
+Usando mapas lee os valores asociados 
+ás temperaturas de 5 localidades. 
+Debes crear unha función que devolva a media, 
+outra que devolva o valor máximo e 
+outra a mínima temperatura, 
+asociada á súa localidade.
+
+
+Partindo dun texto, convertindo este arrays 
+e despois a set (conxuntos) eliminar as 
+palabras duplicadas. Amosar o texto sen 
+as palabras duplicadas. Exemplo pasado: 
+De noite, de día e a todas horas. 
+Resultado= De noite, día e a todas horas.
+
+ 
+Usando funcións callback debes 
+modificar o fluxo do programa seguinte 
+se invirta e o texto final 
+sexa "Hola Juan, que tal estás":
+document.write("Hola Juan,")
+document.write (" tal estás?")
+document.write(" ¿que")

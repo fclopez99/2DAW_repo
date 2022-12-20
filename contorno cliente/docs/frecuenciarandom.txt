@@ -1,0 +1,7 @@
+Frecuencia de números:
+Crear unha aplicación que nos permita comprobar hasta
+que punto a función Math.random é aleatoria.
+Calcularemos unha mostra de 10.000 números aleatorios
+do 1 ao 10. 
+Comprobar a frecuencia de cada número do 1 ao 10
+nesas 10.000 chamadas a math.random
