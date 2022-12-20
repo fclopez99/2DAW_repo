@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Exercicio_1 - Boletín DOM</title>
+    </head>
+    <body>
+        <main id="principal">
+            <script>
+                let total = 100;
+                let capa=document.getElementById("principal");
+
+                for(n=0;n<=total;n++){
+                    nuevoP=document.createElement("p");
+                    nuevoP.textContent=`Párrafo ${n}`;
+                    if(n%2!=0){
+                        capa.appendChild(nuevoP);
+                        nuevoP.style.color="red";
+                    }else{
+                    capa.appendChild(nuevoP);
+                    nuevoP.style.color="green";
+                    }
+                }
+            </script>
+        </main>
+    </body>
+</html>

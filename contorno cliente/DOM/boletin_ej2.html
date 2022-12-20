@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Exercicio_2 - Boletín DOM</title>
+    </head>
+    <body>
+        <main id="principal">
+            <input type="button" id="crear" value="Crear Enlace">
+            <script>
+                let boton = document.getElementById("crear");
+                let n=1;
+                boton.addEventListener("click", function crear(ev){
+                    let nuevo_enlace=document.createElement("a");
+                    if (ev.type=="click"){
+                        let capa=document.getElementById("principal");
+                        nuevo_enlace.textContent=`Enlace ${n} `;
+                        capa.appendChild(nuevo_enlace);
+                        n++;
+                    }
+                });
+            </script>
+        </main>
+    </body>
+</html>
