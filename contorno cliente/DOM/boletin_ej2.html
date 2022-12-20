@@ -13,6 +13,7 @@
                     if (ev.type=="click"){
                         let capa=document.getElementById("principal");
                         nuevo_enlace.textContent=`Enlace ${n} `;
+                        nuevo_enlace.setAttribute("href","a");
                         capa.appendChild(nuevo_enlace);
                         n++;
                     }
